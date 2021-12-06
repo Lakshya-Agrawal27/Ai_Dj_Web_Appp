@@ -1,4 +1,5 @@
-song = ""
+darkside = "";
+harry_potter = "";
 leftwristX = 0;
 leftwristY = 0;
 rightwristX = 0;
@@ -7,7 +8,7 @@ rightwristY = 0;
 function setup()
 {
     canvas = createCanvas(500, 500);
-        canvas.position(520, 190);
+    canvas.position(520, 190);
 
 
     video = createCapture(VIDEO);
@@ -26,13 +27,13 @@ function draw(){
 }
 
 function preload(){
-    song = loadSound("music.mp3");
+    darkside = loadSound("darkside.mp3");
 }
 
 function play(){
-    song.play()
-    song.setVolume(1);
-    song.rate(1);
+    darkside.play()
+    darkside.setVolume(1);
+    darkside.rate(1);
 }
 
 function gotPoses(results)

@@ -49,14 +49,8 @@ body
     font-size: 23px;
     margin: 15px;
 }
-
-.play_button
-{
-    width: 130px;
-    font-size: 25px;
-}
-
-canvas
-{
-    border: 5px solid white
+canvas{
+    background-color: aqua;
+    border: 5px solid darkblue;
+    box-shadow: 15px 15px 15px aqua;
 }
