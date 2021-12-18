@@ -4,8 +4,13 @@ leftwristX = 0;
 leftwristY = 0;
 rightwristX = 0;
 rightwristY = 0;
-scoreleftwristX ="";
+scoreleftwristX =0;
+scorerightwristX =0;
+song1status="";
+song2status="";
+
 song1status = harry_potter.isPlaying();
+song2status = darkside.isPlaying();
 
 function setup()
 {
@@ -43,6 +48,16 @@ function draw(){
     }
 }
 
+if(scorerightwristX > 0.01){
+    circle(rightwristX, rightwristY, 20);
+    darkside.stop();
+    if(song2status = false){
+        darkside.play();
+        document.getElementById("song_name").innerHTML = "PLaying song - Darkside Song";
+    }
+}
+
+
 function preload(){
     darkside = loadSound("darkside.mp3");
     harry_potter = loadSound("music.mp3");
@@ -61,6 +76,8 @@ function gotPoses(results)
          console.log(results);
          scoreleftwristX = results[0].pose.keypoints[9].score;
          console.log("scoreleftwristX = " + scoreleftwristX);
+         scorerightwristX = results[0].pose.keypoints[10].score;
+         console.log("scorerightwristX = " + scorerightwristX);
         
          leftwristX = results[0].pose.leftWrist.x;
          leftwristY = results[0].pose.leftWrist.y;
