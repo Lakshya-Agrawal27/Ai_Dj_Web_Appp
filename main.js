@@ -9,9 +9,6 @@ scorerightwristX =0;
 song1status="";
 song2status="";
 
-song1status = harry_potter.isPlaying();
-song2status = darkside.isPlaying();
-
 function setup()
 {
     canvas = createCanvas(500, 500);
@@ -37,6 +34,9 @@ function draw(){
 
     fill('blue');
     stroke('cyan');
+    
+song1status = harry_potter.isPlaying();
+song2status = darkside.isPlaying();
 
     if(scoreleftwristX > 0.01){
         circle(leftwristX, leftwristY, 20);
